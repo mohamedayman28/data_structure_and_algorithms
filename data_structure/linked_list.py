@@ -161,15 +161,3 @@ class LinkedList:
         while current_node is not None:
             print(current_node)
             current_node = current_node.get_next_node()
-
-
-if __name__ == '__main__':
-    print(5 * '\n')
-    linked_list = LinkedList()
-
-    linked_list.append_node('foo')
-    linked_list.append_node('fool')
-
-    linked_list.add_node_after_node('zar', 0)
-
-    print(linked_list.get_size() == 3)
