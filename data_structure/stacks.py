@@ -1,7 +1,7 @@
 stack = [3, 4, 5]
 
+# Time complexity O(1)
 stack.append(1)
-print(stack)
 
+# Time complexity O(1)
 stack.pop()
-print(stack)
