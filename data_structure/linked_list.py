@@ -27,6 +27,7 @@ class LinkedList:
         return f'LinkedList.head({self.__head})\nLinkedList.Tail({self.__tail})\nLinkedList.size({self.__size})'
 
     def delete_tail(self):
+        """Time complexity O(n)"""
         if self.__size == 0:
             return "List is empty"
         else:
@@ -44,12 +45,14 @@ class LinkedList:
                 self.__size -= 1
 
     def get_tail(self):
+        """Time complexity O(1)"""
         if self.__tail is None:
             return None
         else:
             return self.__tail
 
     def delete_head(self):
+        """Time complexity O(1)"""
         if self.__size == 0:
             return "List is empty"
         else:
@@ -59,6 +62,7 @@ class LinkedList:
             self.__size -= 1
 
     def get_head(self):
+        """Time complexity O(1)"""
         if self.__head is None:
             return None
         else:
@@ -68,6 +72,7 @@ class LinkedList:
         return self.__size
 
     def append_node(self, value=None):
+        """Time complexity O(1)"""
         if isinstance(value, Node):
             new_node = value
         else:
@@ -82,6 +87,7 @@ class LinkedList:
         self.__size += 1
 
     def prepend_node(self, value=None):
+        """Time complexity O(1)"""
         if self.__size == 0:
             self.append_node(value)
         else:
@@ -97,6 +103,7 @@ class LinkedList:
             self.__size += 1
 
     def delete_node(self, value):
+        """Time complexity O(n)"""
         if self.__size == 0:
             return "List is empty"
         else:
@@ -113,6 +120,7 @@ class LinkedList:
             self.__size -= 1
 
     def add_node_after_node(self, value, position):
+        """Time complexity O(n)"""
         current_position = 0
         wanted_position = position - 1
 
@@ -140,6 +148,7 @@ class LinkedList:
             new_node.set_next_node(next_node)
 
     def get_node_position(self, value):
+        """Time complexity O(n)"""
         current_node = self.__head
         position = 1
 
@@ -153,6 +162,7 @@ class LinkedList:
         return -1
 
     def get_all_nodes(self):
+        """Time complexity O(n)"""
         if self.__size == 0:
             return "List is empty"
 
