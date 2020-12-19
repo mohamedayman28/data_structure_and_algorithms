@@ -44,13 +44,6 @@ class LinkedList:
                 self.__tail.set_next_node(None)
                 self.__size -= 1
 
-    def get_tail(self):
-        """Time complexity O(1)"""
-        if self.__tail is None:
-            return None
-        else:
-            return self.__tail
-
     def delete_head(self):
         """Time complexity O(1)"""
         if self.__size == 0:
@@ -61,6 +54,30 @@ class LinkedList:
             self.__head = new_head
             self.__size -= 1
 
+    def delete_node(self, value):
+        """Time complexity O(n)"""
+        if self.__size == 0:
+            return "List is empty"
+        else:
+            current_node = self.__head
+            next_node = current_node.get_next_node()
+            next_next_node = next_node.get_next_node()
+
+        while next_node.get_current_node_value() != value:
+            current_node = next_node
+            next_node = next_next_node
+            next_next_node = next_node.get_next_node()
+        else:
+            current_node.set_next_node(next_next_node)
+            self.__size -= 1
+
+    def get_tail(self):
+        """Time complexity O(1)"""
+        if self.__tail is None:
+            return None
+        else:
+            return self.__tail
+
     def get_head(self):
         """Time complexity O(1)"""
         if self.__head is None:
@@ -70,6 +87,19 @@ class LinkedList:
 
     def get_size(self):
         return self.__size
+
+    def get_node_position(self, value):
+        """Time complexity O(n)"""
+        current_node = self.__head
+        position = 1
+
+        while current_node is not None:
+            if current_node.get_current_node_value() == value:
+                return position
+            else:
+                position += 1
+                current_node = current_node.get_next_node()
+        return -1
 
     def append_node(self, value=None):
         """Time complexity O(1)"""
@@ -102,23 +132,6 @@ class LinkedList:
             self.__head = new_head
             self.__size += 1
 
-    def delete_node(self, value):
-        """Time complexity O(n)"""
-        if self.__size == 0:
-            return "List is empty"
-        else:
-            current_node = self.__head
-            next_node = current_node.get_next_node()
-            next_next_node = next_node.get_next_node()
-
-        while next_node.get_current_node_value() != value:
-            current_node = next_node
-            next_node = next_next_node
-            next_next_node = next_node.get_next_node()
-        else:
-            current_node.set_next_node(next_next_node)
-            self.__size -= 1
-
     def add_node_after_node(self, value, position):
         """Time complexity O(n)"""
         current_position = 0
@@ -146,20 +159,6 @@ class LinkedList:
         else:
             current_node.set_next_node(new_node)
             new_node.set_next_node(next_node)
-
-    def get_node_position(self, value):
-        """Time complexity O(n)"""
-        current_node = self.__head
-        position = 1
-
-        while current_node is not None:
-            if current_node.get_current_node_value() == value:
-                return position
-            else:
-                position += 1
-                current_node = current_node.get_next_node()
-
-        return -1
 
     def get_all_nodes(self):
         """Time complexity O(n)"""
