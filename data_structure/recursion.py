@@ -8,9 +8,9 @@ def recursive(input):
 
 
 def get_fib(position):
-    """A recusrsive function to represetn the Fibonacci Sequence.
+    """A recursive function that represents the Fibonacci Sequence, takes
+    position and return its value within the Fibonacci Sequence.
     Time Complexity O(n)"""
-
     # Base case
     if position == 0 or position == 1:
         return position
