@@ -1,25 +1,23 @@
-class Queue:
-    def __init__(self, head=None):
-        self.__items = [head]
-        self.__size = 0
+"""Python program for implementation of different types of Queue."""
 
-    def __str__(self):
-        return str(self.__items)
+from collections import deque
 
-    def get_size(self):
-        return self.__size
 
-    def enqueue(self, new_element):
-        """Time complexity O(1)"""
-        self.__size += 1
-        return self.__items.append(new_element)
+queue = deque(['A', 'B', 'C'])
 
-    def dequeue(self):
-        """Time complexity O(1)"""
-        if self.__size != 0:
-            self.__size -= 1
-            return self.__items.pop(0)
 
-    def peek(self):
-        """Time complexity O(1)"""
-        return self.__items[0]
+# Add at first.
+# Time complexity O(1).
+queue.appendleft(-1)
+
+# Add at end.
+# Time complexity O(1).
+queue.append('Z')
+
+# Remove first element(-1).
+# Time complexity O(1).
+queue.popleft()
+
+# Remove last element(Z).
+# Time complexity O(1)).
+queue.pop()
