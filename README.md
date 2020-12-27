@@ -15,3 +15,5 @@ The data structure and algorithms implemented with Python are:
   * [Stacks](https://github.com/mohamedayman28/data_structure_and_algorithms/blob/main/data_structure/stacks.py)
   * [Queue](https://github.com/mohamedayman28/data_structure_and_algorithms/blob/main/data_structure/queue.py)
   * [Recursion](https://github.com/mohamedayman28/data_structure_and_algorithms/blob/main/data_structure/recursion.py)
+  * [Binary Search](https://github.com/mohamedayman28/data_structure_and_algorithms/blob/main/data_structure/binary_search.py)
+  * [Bubble Sort](https://github.com/mohamedayman28/data_structure_and_algorithms/blob/main/data_structure/bubble_sort.py)
