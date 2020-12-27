@@ -128,9 +128,6 @@ class TestLinkedList(unittest.TestCase):
         self.assertEqual(list_size_is_4, 4)
         self.assertEqual(node_position_is_1, 1)
 
-    def test_delete_node_method(self):
-        pass
-
 
 if __name__ == '__main__':
     print(5 * '\n')

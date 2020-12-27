@@ -1,3 +1,6 @@
+"""Python program for implementation of Stack."""
+
+
 class Node:
     def __init__(self, value):
         self.value = value
@@ -27,82 +30,109 @@ class LinkedList:
         return f'LinkedList.head({self.__head})\nLinkedList.Tail({self.__tail})\nLinkedList.size({self.__size})'
 
     def delete_tail(self):
-        """Time complexity O(n)"""
+        """ Delete Tail and assign pre-last element as Tail.
+        Access Tail Time complexity is O(n), while deleting Tail is O(1)."""
+
         if self.__size == 0:
             return "List is empty"
         else:
-            current_node = self.__head
-            next_node = current_node.get_next_node()
-            next_next_node = next_node.get_next_node()
+            # Three pointer respectively Head, Head.Next, Head.Next.Next.
+            first_pointer = self.__head
+            second_pointer = first_pointer.get_next_node()
+            # If None pointers reached end of list.
+            third_pointer = second_pointer.get_next_node()
 
-            while next_next_node is not None:
-                current_node = next_node
-                next_node = next_next_node
-                next_next_node = next_node.get_next_node()
+            while third_pointer is not None:
+                # Shift pointers by one step.
+                first_pointer = second_pointer
+                second_pointer = third_pointer
+                third_pointer = second_pointer.get_next_node()
             else:
-                self.__tail = current_node
+                # If third pointer is None, set first pointer as Tail.
+                self.__tail = first_pointer
                 self.__tail.set_next_node(None)
                 self.__size -= 1
 
     def delete_head(self):
-        """Time complexity O(1)"""
+        """ Delete Head and assign Head.next as Head.
+        Time complexity O(1)."""
+
         if self.__size == 0:
             return "List is empty"
         else:
-            current_head = self.__head
-            new_head = current_head.get_next_node()
-            self.__head = new_head
+            # Two pointer respectively Head, Head.Next.
+            first_pointer = self.__head
+            second_pointer = first_pointer.get_next_node()
+            # Replace first pointer with second pointer.
+            self.__head = second_pointer
             self.__size -= 1
 
     def delete_node(self, value):
-        """Time complexity O(n)"""
+        """ Delete node at specific position and shift list Nodes by one.
+        Time complexity is O(n))."""
+
         if self.__size == 0:
             return "List is empty"
         else:
-            current_node = self.__head
-            next_node = current_node.get_next_node()
-            next_next_node = next_node.get_next_node()
+            # Three pointer respectively Head, Head.Next, Head.Next.Next.
+            first_pointer = self.__head
+            second_pointer = first_pointer.get_next_node()
+            third_pointer = second_pointer.get_next_node()
 
-        while next_node.get_current_node_value() != value:
-            current_node = next_node
-            next_node = next_next_node
-            next_next_node = next_node.get_next_node()
+        while second_pointer.get_current_node_value() != value:
+            # Shift pointers by one step.
+            first_pointer = second_pointer
+            second_pointer = third_pointer
+            third_pointer = second_pointer.get_next_node()
         else:
-            current_node.set_next_node(next_next_node)
+            first_pointer.set_next_node(third_pointer)
             self.__size -= 1
 
     def get_tail(self):
-        """Time complexity O(1)"""
+        """ Time complexity O(1)."""
+
         if self.__tail is None:
             return None
         else:
             return self.__tail
 
     def get_head(self):
-        """Time complexity O(1)"""
+        """ Time complexity O(1)."""
         if self.__head is None:
             return None
         else:
             return self.__head
 
     def get_size(self):
+        """ Time complexity O(1)."""
         return self.__size
 
     def get_node_position(self, value):
-        """Time complexity O(n)"""
+        """ Comparing argument value against each Node value and return its position.
+        Time complexity O(n)."""
+
+        # Set Head pointer.
         current_node = self.__head
+        # Set position starter.
         position = 1
 
+        # As pointer didn't reach end of the list.
         while current_node is not None:
+            # If argument value equals Node value return Node position.
             if current_node.get_current_node_value() == value:
                 return position
+            # If argument value not equals Node value increment position by one.
             else:
                 position += 1
+                # Shift pointer to next Node.
                 current_node = current_node.get_next_node()
+        # If argument value doesn't evaluate with any Node value.
         return -1
 
     def append_node(self, value=None):
-        """Time complexity O(1)"""
+        """ Add Node to the end of the list.
+        Time complexity O(1)."""
+
         if isinstance(value, Node):
             new_node = value
         else:
@@ -117,7 +147,9 @@ class LinkedList:
         self.__size += 1
 
     def prepend_node(self, value=None):
-        """Time complexity O(1)"""
+        """ Add Node at the front of the list.
+        Time complexity O(1)."""
+
         if self.__size == 0:
             self.append_node(value)
         else:
@@ -129,44 +161,53 @@ class LinkedList:
                 new_head = Node(value)
 
             new_head.set_next_node(current_head)
+            # Set new Node as Head.
             self.__head = new_head
+            # Increment list size by one.
             self.__size += 1
 
     def add_node_after_node(self, value, position):
-        """Time complexity O(n)"""
+        """ Get Node by position and assign its next pointer to the new Node.
+        Time complexity O(n)."""
+
         current_position = 0
-        wanted_position = position - 1
+        target_position = position - 1
 
         if not isinstance(value, Node):
             new_node = Node(value)
         else:
             new_node = value
 
-        if position == 0:
+        # Set two pointer respectively Head, Head.Next.
+        first_pointer = self.__head
+        second_pointer = first_pointer.get_next_node()
+
+        if self.__size == 0:
             self.prepend_node(new_node)
+        elif position == 0:
+            first_pointer.set_next_node(new_node)
             return
         elif position > self.__size:
             self.append_node(new_node)
             return
 
-        current_node = self.__head
-        next_node = current_node.get_next_node()
-
-        while current_node is not None and current_position != wanted_position:
-            current_node = next_node
-            next_node = current_node.get_next_node()
+        while current_position != target_position:
+            # Shift pointers by one step.
+            first_pointer = second_pointer
+            second_pointer = first_pointer.get_next_node()
             current_position += 1
         else:
-            current_node.set_next_node(new_node)
-            new_node.set_next_node(next_node)
+            first_pointer.set_next_node(new_node)
+            new_node.set_next_node(second_pointer)
 
     def get_all_nodes(self):
-        """Time complexity O(n)"""
+        """ Loop over all Nodes and print them out.
+        Time complexity O(n)."""
         if self.__size == 0:
             return "List is empty"
 
-        current_node = self.__head
+        first_pointer = self.__head
 
-        while current_node is not None:
-            print(current_node)
-            current_node = current_node.get_next_node()
+        while first_pointer is not None:
+            print(first_pointer)
+            first_pointer = first_pointer.get_next_node()
