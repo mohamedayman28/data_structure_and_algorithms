@@ -12,8 +12,39 @@ The code implement the four common data structure operations
 
 The data structure and algorithms implemented with Python are:
   * [Linked List](https://github.com/mohamedayman28/data_structure_and_algorithms/blob/main/linked_list.py)
+    - **Efficiency**
+      - Space Complexity O(n)
+      - Time Complexity
+        - Access first node: O(1)
+        - Access last node: O(1)
+        - Access regular node: O(n)
+        - Search: O(n)
+        - Insertion: O(1)
+        - Deletion: O(1)
   * [Stacks](https://github.com/mohamedayman28/data_structure_and_algorithms/blob/main/stacks.py)
+    - **Efficiency**
+      - Space Complexity: O(n)
+      - Time Complexity
+        - Access: O(n)
+        - Access last element: O(1)
+        - Search: O(n)
+        - Insertion: O(1)
+        - Deletion: O(1)
   * [Queue](https://github.com/mohamedayman28/data_structure_and_algorithms/blob/main/queue.py)
-  * [Recursion](https://github.com/mohamedayman28/data_structure_and_algorithms/blob/main/recursion.py)
+    - **Efficiency**
+      - Space Complexity: O(n)
+      - Time Complexity
+        - Access: O(n)
+        - Access first element (Peek): O(1)
+        - Search: O(n)
+        - Insertion: O(1)
+        - Deletion: O(1)
   * [Binary Search](https://github.com/mohamedayman28/data_structure_and_algorithms/blob/main/binary_search.py)
+    - **Efficiency**
+      - Space Complexity: O(1)
+      - Time Complexity: O(log n)
   * [Bubble Sort](https://github.com/mohamedayman28/data_structure_and_algorithms/blob/main/bubble_sort.py)
+    - **Efficiency**
+      - Space Complexity: O(1)
+      - Time Complexity: O( ** 2)
+  * [Recursion](https://github.com/mohamedayman28/data_structure_and_algorithms/blob/main/recursion.py)
