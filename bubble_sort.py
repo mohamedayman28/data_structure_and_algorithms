@@ -7,7 +7,9 @@ def bubble_sort(arr):
 
     n = len(arr)
 
-    # Show steps during iterations, and not mandatory for Bubble Sort.
+    # NOTE: Not mandatory for Bubble Sort, will be used within the code for the
+    # feedback messages to show the steps during execustion, Thus deleting will
+    # cause ERROR.
     outer_loop_result = 0
     inner_loop_result = 0
 
@@ -18,14 +20,14 @@ def bubble_sort(arr):
         print(f"Result: {outer_loop_result} ==> {arr}")
 
         # Inner loop.
-        # NOTE: Loop is (n - 2) to avoid index out of range when swap last two
-        # elements.
+        # Loop is (n - 2) to avoid index out of range when swap last two elements.
         for inner_loop in range(n - outer_loop - 1):
             # If left element greater than its next element, swap them.
             if arr[inner_loop] > arr[inner_loop + 1]:
                 arr[inner_loop],
                 arr[inner_loop + 1] = arr[inner_loop + 1], arr[inner_loop]
 
+            # Feedback message.
             inner_loop_result += 1
             print(f"    Inner: {inner_loop_result} ==> {arr}")
 

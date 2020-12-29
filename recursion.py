@@ -6,8 +6,7 @@ def recursive(input):
     Replace return with print to output the steps.
     Time Complexity O(n)"""
 
-    # Base case
-
+    # Base Case: Argument input greater than 0.
     if input <= 0:
         return 0
     else:
@@ -20,9 +19,8 @@ def get_fib(position):
     position and return its value within the Fibonacci Sequence.
     Time Complexity O(n)"""
 
-    # Base case
-
-    # Positions 0 or 1 return position, since Fibonacci for 0 is 0 and 1 is 1.
+    # Base Case: Positions greater thatn 0 or 1, since Fibonacci for 0 is 0 and
+    # 1 is 1.
     if position == 0 or position == 1:
         return position
 

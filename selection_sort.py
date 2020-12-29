@@ -4,17 +4,20 @@ https://www.geeksforgeeks.org/python-program-for-selection-sort/"""
 
 
 def selection_sort(arr):
-    """ Time Complexity O(n ** 2)"""
+    """ Time Complexity O(n ** 2).
+    Space Complexity O(1)."""
 
     n = len(arr)
 
-    # To show steps during iterations, and not mandatory for Bubble Sort.
+    # NOTE: Not mandatory for Bubble Sort, will be used within the code for the
+    # feedback messages to show the steps during execustion, Thus deleting will
+    # cause ERROR.
     result = 0
 
     # Outer loop, loop over all elements in the array.
     for outer_loop in range(n):
 
-        # Outer loop feedback message.
+        # Feedback message.
         result += 1
         print(f"Result: {result} ==> {arr}")
 

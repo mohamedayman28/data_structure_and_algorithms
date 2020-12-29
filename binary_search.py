@@ -1,10 +1,7 @@
 """ Python program for implementation of Binary Search."""
 
-from math import floor
-
-
 list_data = [2, 3, 4, 7, 8, 9, 11, 13, 98]
-target = 1
+target = 98
 
 
 def binary_search(list_data=list_data, target=target):
@@ -13,10 +10,8 @@ def binary_search(list_data=list_data, target=target):
     high = len(list_data) - 1
 
     while low <= high:
-        # If mid is 3.5 use 3 as mid.
-        mid = floor((low + high) / 2)
+        mid = (low + high) // 2
 
-        # NOTE: list index is O(1).
         if list_data[mid] == target:
             return mid
         elif target < list_data[mid]:
@@ -24,5 +19,5 @@ def binary_search(list_data=list_data, target=target):
         else:
             low = mid + 1
 
-    # -1 for not exist element.
+    # If element does not exist.
     return -1
