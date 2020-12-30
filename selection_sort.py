@@ -9,9 +9,9 @@ def selection_sort(arr):
 
     n = len(arr)
 
-    # NOTE: Not mandatory for Bubble Sort, will be used within the code for the
-    # feedback messages to show the steps during execustion, Thus deleting will
-    # cause ERROR.
+    # Feedback messages are not mandatory for Bubble Sort, will be used within
+    # the code to show the steps during execustion, Thus deleting next variable
+    # will cause an ERROR.
     result = 0
 
     # Outer loop, loop over all elements in the array.
