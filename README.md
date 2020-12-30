@@ -18,3 +18,4 @@ The data structure and algorithms implemented with Python are:
   * [Binary Search](https://github.com/mohamedayman28/data_structure_and_algorithms/blob/main/binary_search.py)
   * [Bubble Sort](https://github.com/mohamedayman28/data_structure_and_algorithms/blob/main/bubble_sort.py)
   * [Selection Sort](https://github.com/mohamedayman28/data_structure_and_algorithms/blob/main/selection_sort.py)
+  * [Merge Sort](https://github.com/mohamedayman28/data_structure_and_algorithms/blob/main/merge_sort.py)
