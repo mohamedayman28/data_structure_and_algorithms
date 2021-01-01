@@ -10,7 +10,7 @@ The code implement the four common data structure operations
   * Insertion
   * Deletion
 
-** Please consider to Star the repository **
+**Please consider to Star the repository**
 
 The data structure and algorithms implemented with Python are:
   * [Linked List](https://github.com/mohamedayman28/data_structure_and_algorithms/blob/main/linked_list.py)
