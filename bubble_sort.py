@@ -1,5 +1,4 @@
-""" Python program for implementation of Bubble Sort.
-Code originally from: https://www.geeksforgeeks.org/bubble-sort/"""
+""" Python program for implementation of Bubble Sort."""
 
 
 def bubble_sort(arr):
