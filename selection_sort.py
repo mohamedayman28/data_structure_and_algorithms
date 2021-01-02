@@ -1,6 +1,4 @@
-""" Python program for implementation of Selection Sort.
-Code originally from:
-https://www.geeksforgeeks.org/python-program-for-selection-sort/"""
+""" Python program for implementation of Selection Sort."""
 
 
 def selection_sort(arr):
@@ -12,14 +10,15 @@ def selection_sort(arr):
     # Feedback messages are not mandatory for Bubble Sort, will be used within
     # the code to show the steps during execustion, Thus deleting next variable
     # will cause an ERROR.
-    result = 0
+    outer_loop_result = 0
+    inner_loop_result = 0
 
     # Outer loop, loop over all elements in the array.
     for outer_loop in range(n):
 
         # Feedback message.
-        result += 1
-        print(f"Result: {result} ==> {arr}")
+        outer_loop_result += 1
+        print(f"Result: {outer_loop_result} ==> {arr}")
 
         # Set first index in the array as smallest.
         smallest_index = outer_loop
@@ -30,6 +29,10 @@ def selection_sort(arr):
         for inner_loop in range(smallest_index + 1, n):
             if arr[smallest_index] > arr[inner_loop]:
                 smallest_index = inner_loop
+
+            # Feedback message.
+            inner_loop_result += 1
+            print(f"    Inner: {inner_loop_result} ==> {arr}")
 
         # Swamp elements, if needed.
         arr[outer_loop], arr[smallest_index] = arr[smallest_index], arr[outer_loop]
