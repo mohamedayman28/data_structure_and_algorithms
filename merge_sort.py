@@ -29,7 +29,7 @@ def merge_sort(arr):
 
         i = j = k = 0
 
-        # Copy data to temporarily arrays left_half[] and right_half[]
+        # Copy data to two temporarily arrays left_half[] and right_half[]
         while i < len(left_half) and j < len(right_half):
             if left_half[i] < right_half[j]:
                 arr[k] = left_half[i]
@@ -41,7 +41,7 @@ def merge_sort(arr):
 
         # Eventually the above loop will break due the imbalance
         # e.g. False and True, and biggest number from either left or right half
-        # will be left without being added to the original array.
+        # will be remained without being added to the temporarily array.
         while i < len(left_half):
             arr[k] = left_half[i]
             i += 1

@@ -23,9 +23,7 @@ def selection_sort(arr):
         # Set first index in the array as smallest.
         smallest_index = outer_loop
 
-        # Inner loop, escape index by +1(smallest_index + 1, n) for each loop,
-        # and loop over the rest elements in the array, to make comparison
-        # between escaped element and rest of element.
+        # Shift by one step for each loop corresponding to the outer loop.
         for inner_loop in range(smallest_index + 1, n):
             if arr[smallest_index] > arr[inner_loop]:
                 smallest_index = inner_loop
