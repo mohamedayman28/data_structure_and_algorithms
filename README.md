@@ -1,7 +1,5 @@
 # Data Structure and Algorithms with Python
 
-![image](https://raw.githubusercontent.com/mohamedayman28/data_structure_and_algorithms/main/data_structure_and_algorithms.jpg)
-
 This repository is related to the Arabic tutorial [here](https://www.facebook.com/MohamedAymanHassen/posts/1340680682935215), within the tutorial we discuss the common data structure and algorithms and their worst and best case for each, then implement the code using Python.
 
 The code implement the four common data structure operations
