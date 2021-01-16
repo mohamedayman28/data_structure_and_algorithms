@@ -1,4 +1,4 @@
-""" Python program for implementation of different types of recursion."""
+""" Python program for implementation of Recursion abstract data structure."""
 
 
 def recursive(input):

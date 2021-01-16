@@ -1,4 +1,4 @@
-"""Python program for implementation of different types of Queue."""
+""" Python program for implementation of Queue abstract data structure."""
 
 from collections import deque
 
@@ -14,10 +14,10 @@ queue.appendleft(-1)
 # Time complexity O(1).
 queue.append('Z')
 
-# Remove first element(-1).
+# Remove first element.
 # Time complexity O(1).
 queue.popleft()
 
-# Remove last element(Z).
-# Time complexity O(1)).
+# Remove last element.
+# Time complexity O(1).
 queue.pop()

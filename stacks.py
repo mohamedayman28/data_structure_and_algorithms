@@ -1,4 +1,4 @@
-"""Python program for implementation of Stack."""
+""" Python program for implementation of Stack abstract data structure."""
 
 stack = [3, 4, 5]
 
