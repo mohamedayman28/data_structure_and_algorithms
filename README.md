@@ -21,4 +21,4 @@ The data structure and algorithms implemented with Python are:
   * [Merge Sort](https://github.com/mohamedayman28/data_structure_and_algorithms/blob/main/merge_sort.py)
 
 Python built-in data structure efficiency.
-  * [List] (https://github.com/mohamedayman28/data_structure_and_algorithms/blob/main/list_methods.py)
+  * [List](https://github.com/mohamedayman28/data_structure_and_algorithms/blob/main/list_methods.py)
