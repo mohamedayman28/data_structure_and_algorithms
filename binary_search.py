@@ -5,6 +5,8 @@ target = 98
 
 
 def binary_search(list_data=list_data, target=target):
+    """ Time Complexity O(log n)"""
+
     # Set low and high pointers
     low = 0
     high = len(list_data) - 1

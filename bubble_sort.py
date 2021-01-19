@@ -2,7 +2,8 @@
 
 
 def bubble_sort(arr):
-    """ Time Complexity O(n ** 2)"""
+    """ Time Complexity O(n ** 2)
+    Speace Complexity O(1)"""
 
     n = len(arr)
 
