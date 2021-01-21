@@ -1,14 +1,6 @@
-""" Efficiency cheat-sheet for Python list data structure.
-More details at https://wiki.python.org/moin/TimeComplexity."""
-
-"""
-# Time Complexity from good to worst
-    * O(1) Constant time complexity.
-    * O(log n) Logarithmic time complexity.
-    * O(n) Linear time complexity.
-    * O(n log n) Linearithmic time complexity.
-    * O(n ** 2) Quadratic time complexity.
-"""
+""" Script is about:
+Efficiency cheat-sheet for Python list data structure. More details at
+https://wiki.python.org/moin/TimeComplexity."""
 
 """
 Summary
@@ -21,14 +13,14 @@ Summary
     - .pop('car')
     - .insert(3, 'car')
     - .reverse()
-    - del operator e.g. del list[2]
-    - contains e.g. 'man' in list
-    - iteration e.g. for e in list
-NOTE: K means depending on the other elements size.
+    - del operator (e.g. del list[2])
+    - contains (e.g. 'man' in list)
+    - iteration (e.g. for e in list)
+NOTE: K means, depending on the other elements size.
 # O(k)
-    - slice e.g. list[:number]
+    - slice (e.g. list[:number])
     - NOTE: getting the slice is O(k) deleting that slice is O(n)
-    - concatenate e.g. list + list_2
+    - concatenate (e.g. list + list_2)
 # O(n log n)
     - .sort()
 # O(nk)

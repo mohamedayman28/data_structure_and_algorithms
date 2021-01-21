@@ -1,0 +1,49 @@
+Summary:
+This will be ongoing growing notes picked from the internet and my career
+serving the purpose of writing better Python code.
+
+Notes about:
+1 - Time Complexity from good to worst(top-to-down). >>> line 11
+2 - len(list) is O(1). >>> line 18
+3 - List VS Tuple efficiency. >>> line 22
+4 - Duplicated keys:values pairs in dictionary. >>> line 37
+
+NOTE no.1 Time Complexity from good to worst(top-to-down)
+    * O(1) Constant time complexity.
+    * O(log n) Logarithmic time complexity.
+    * O(n) Linear time complexity.
+    * O(n log n) Linearithmic time complexity.
+    * O(n ** 2) Quadratic time complexity.
+
+NOTE no.2 len(list) is O(1)
+    * List built on the array data structure
+    * Array length = (Array_head memory allocation) - (Array_tail memory allocation)
+
+NOTE no.3 List VS Tuple efficiency.
+    * Tuple is slightly faster to access than list.
+    * Tuples are immutable data types which are stored in a single block of memory
+    so it doesn’t require extra space to store new objects.
+    * But list are mutable data types and are allocated in two blocks where the
+    fixed one with all object information and a variable sized block for the data.
+    * There is slight difference in indexing speed of list and tuple because tuples
+    uses fewer pointers when indexing comparing to list. Because of fewer pointers,
+    access mechanism is generally faster in tuples than lists.
+    * Because that Tuple is an immutable data type, unpacking must be equal to the
+    variables, otherwise ERROR will occur.
+    >>>> t = (1, 2, 3, 4)
+    >>>> s1, s2, s3, s4 = t
+    While it's OK with list.
+
+NOTE no.4 Duplicated keys and values in dictionary.
+    * Create Dictionary with duplicated keys, will neglect first pairs and keep the last.
+    >>>> {2:'a', 3:'b', 2: 'c'} returns {2: 'c', 3: 'b'}
+    * Python dictionaries built-on the hash tables data structure.
+    * Hash Table use the Set abstract data structure to implement register its keys to the array.
+    * So we can't have repeated key but it's fine for the repeated values.
+    >>>> {'a': 10, 'b': 20, 'c': 30} returns {'a': 10, 'b': 20, 'c': 30}
+    * Since Set has no order, you can't have same result with method like
+    .popitem() with that being said, it has been mentioned on RealPython the
+    next note "In Python versions less than 3.6, popitem() would return an arbitrary
+    (random) key-value pair since Python dictionaries were unordered before version 3.6"
+    Link: https://realpython.com/python-dicts/#built-in-dictionary-methods.
+
