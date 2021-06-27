@@ -1,5 +1,7 @@
 # Data Structure and Algorithms with Python
 
+**Note**: Please consider that, I created this repository from a long time so you may find some bugs on execution, if face a bug, leave a comment or pull a request and I will help.
+
 This repository is related to the Arabic tutorial [here](https://www.facebook.com/MohamedAymanHassen/posts/1340680682935215), within the tutorial we discuss the common data structure and algorithms and their worst and best case for each, then implement the code using Python.
 
 Also, note that the Python version used in the implementation is Python3.6, you may find with the latest Python version there is a better way to implement the Data Structure and Algorithms.
