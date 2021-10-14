@@ -1,6 +1,3 @@
-"""Python program for implementation of Stack."""
-
-
 class Node:
     def __init__(self, value):
         self.value = value
